@@ -1,16 +1,12 @@
-NAME := Clockwork
-TYPE := APP
-APP_MIME_SIG := "application/x-vnd.clockwork-app"
-TARGET_DIR := .
+NAME := ResizableReplicant
+TYPE := SHARED
+APP_MIME_SIG := "application/x-vnd.resizable-box-lib"
+TARGET_DIR := ../output
 
 SRCS = \
-    src/core/HebrewDate.cpp \
-    src/core/ResizableBox.cpp	\
-    src/modules/TodayModule.cpp \
-    src/main.cpp
+    ResizableBox.cpp 
 
-LIBS = 	hdate \
-		be 	\
+LIBS = 	be 	\
 		stdc++ \
 		supc++ \
 		localestub	\
@@ -29,9 +25,8 @@ SYSTEM_INCLUDE_PATHS =  \
 		boot/system/develop/headers/cpp 	\
 		boot/system/develop/headers/posix
 		   
-LOCAL_INCLUDE_PATHS =   src/core		\
-						lib				\
-						src/modules
+LOCAL_INCLUDE_PATHS =   
+
 LOCALES = en ru
 
 #	Specify the level of optimization that you want. Specify either NONE (O0),
@@ -40,7 +35,7 @@ OPTIMIZE := NONE
 
 #	Specify the resource definition files to use. Full or relative paths can be
 #	used.
-RDEFS := Genio.rdef
+RDEFS := 
 
 #	Specify the resource files to use. Full or relative paths can be used.
 #	Both RDEFS and RSRCS can be utilized in the same Makefile.
