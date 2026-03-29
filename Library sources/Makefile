@@ -1,4 +1,4 @@
-NAME := ResizableReplicant
+NAME := ResizableReplicant.so
 TYPE := SHARED
 APP_MIME_SIG := "application/x-vnd.resizable-box-lib"
 TARGET_DIR := ../output
@@ -11,8 +11,7 @@ LIBS = 	be 	\
 		supc++ \
 		localestub	\
 		translation \
-		root	\
-		intl
+		root
 		
 LIBPATHS =	boot/system/develop/lib	\
 			lib

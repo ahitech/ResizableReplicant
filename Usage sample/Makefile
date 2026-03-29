@@ -1,18 +1,18 @@
-NAME := Resizable Replicant Sample
+NAME := Resizable\ Replicant\ Sample
 TYPE := APP
 APP_MIME_SIG := "application/x-vnd.resizable-replicant-sample"
 TARGET_DIR := ../output
 
 SRCS = \
-    main.cpp
+    MainWindow.cpp	\
+    ../Library Sources/ResizableBox.cpp
 
 LIBS = 	be 	\
 		stdc++ \
 		supc++ \
 		localestub	\
 		translation \
-		root	\
-		intl
+		root
 		
 LIBPATHS =	boot/system/develop/lib	\
 			lib
@@ -25,9 +25,8 @@ SYSTEM_INCLUDE_PATHS =  \
 		boot/system/develop/headers/cpp 	\
 		boot/system/develop/headers/posix
 		   
-LOCAL_INCLUDE_PATHS =   src/core		\
-						lib				\
-						src/modules
+LOCAL_INCLUDE_PATHS =   ../Library Sources		\
+						
 LOCALES = en ru
 
 #	Specify the level of optimization that you want. Specify either NONE (O0),
